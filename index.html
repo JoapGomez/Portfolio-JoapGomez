@@ -3,7 +3,30 @@
 <head>
 <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png"><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JoapGomez — Designer Criativo</title><meta charset="UTF-8">
+<title>JoapGomez — Design estratégico para marcas e lançamentos</title>
+<meta name="description" content="Landing pages, identidades visuais e criativos estratégicos para marcas, infoprodutores e negócios digitais que querem vender e se posicionar melhor.">
+<meta name="theme-color" content="#0A0A0A">
+
+<link rel="canonical" href="https://www.joapgomez.com.br/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Joap Gomez">
+<meta name="application-name" content="JoapGomez">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta property="og:site_name" content="JoapGomez">
+<meta property="og:url" content="https://www.joapgomez.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JoapGomez — Design estratégico para marcas e lançamentos">
+<meta name="twitter:description" content="Landing pages, identidades visuais e criativos estratégicos para marcas, infoprodutores e negócios digitais.">
+
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<meta property="og:title" content="JoapGomez — Design estratégico para marcas e lançamentos">
+<meta property="og:description" content="Design estratégico para aumentar a percepção de valor da sua oferta e fortalecer sua presença no digital.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -323,7 +346,7 @@ nav {
 
 .hero-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: clamp(2.5rem, 5.2vw, 5rem);
   font-weight: 800;
   line-height: 1.0;
   letter-spacing: -0.03em;
@@ -332,6 +355,7 @@ nav {
   animation: fadeUp 0.6s ease 0.2s both;
 }
 
+.hero-title { max-width: 760px; }
 .hero-title .line-accent { color: var(--accent); }
 .hero-title .line-muted {
   color: transparent;
@@ -1755,23 +1779,405 @@ section { padding: 3.5rem 5%; }
   font-weight: bold;
 }
 
+
+/* ─── OTIMIZAÇÕES DE CONVERSÃO E ACESSIBILIDADE ─── */
+.portfolio-context {
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin: -1.5rem 0 2rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (hover: none), (max-width: 768px) {
+  .portfolio-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(10,10,10,0.94) 0%, rgba(10,10,10,0.12) 72%);
+  }
+  .portfolio-overlay-arrow { display: none; }
+}
+
+
+/* ─── FAQ / RESPOSTAS RASTREÁVEIS ─── */
+.faq-section { background: var(--bg2); }
+.faq-intro {
+  max-width: 55ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.faq-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 1.35rem 1.5rem;
+  transition: border-color .2s, background .2s;
+}
+.faq-item:hover, .faq-item[open] {
+  border-color: rgba(191,247,71,.55);
+  background: var(--bg3);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.5;
+  padding-right: 2rem;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: -.1rem;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.75;
+  margin-top: 1rem;
+  max-width: 62ch;
+}
+@media (max-width: 768px) {
+  .faq-grid { grid-template-columns: 1fr; }
+  .portfolio-overlay { padding: 1.15rem; }
+  .portfolio-concept-badge { margin-bottom: .5rem; }
+}
+
+
+/* ─── PORTFÓLIO REALISTA V3 ─── */
+.realistic-site-shot {
+  padding: 0;
+  background: #090909;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.realistic-site-shot .site-browser {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0b0b0b;
+}
+.site-browser-bar {
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: center;
+  background: #171717;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  padding: 0 8px;
+}
+.site-browser-bar.lightbar { background: #e4e0d8; border-bottom-color: rgba(0,0,0,.08); }
+.browser-dots { display: flex; gap: 4px; }
+.browser-dots i { width: 5px; height: 5px; border-radius: 50%; background: #565656; }
+.lightbar .browser-dots i { background: #aaa39a; }
+.browser-address {
+  justify-self: center;
+  min-width: 110px;
+  padding: 3px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  color: #777;
+  font-size: 5px;
+  letter-spacing: .08em;
+  text-align: center;
+}
+.lightbar .browser-address { background: rgba(0,0,0,.05); color: #807a72; }
+.site-page { flex: 1; min-height: 0; overflow: hidden; position: relative; }
+.mini-nav {
+  height: 35px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mini-nav strong { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 9px; letter-spacing: .04em; }
+.mini-nav nav { display: flex; gap: 10px; align-items: center; }
+.mini-nav nav span, .mini-nav nav b { font-size: 4.8px; font-weight: 600; }
+.mini-nav nav b { padding: 4px 7px; border-radius: 10px; }
+.mini-copy small, .frame-copy small { font-size: 4.8px; letter-spacing: .18em; font-weight: 700; }
+.mini-copy h3, .frame-copy h3, .nexo-copy h3 { margin: 7px 0 6px; line-height: 1; }
+.mini-copy p, .frame-copy p { font-size: 6px; line-height: 1.45; max-width: 150px; }
+.mini-copy button, .frame-copy button {
+  margin-top: 9px; border: 0; font: 700 5px 'Plus Jakarta Sans', sans-serif; padding: 6px 10px; border-radius: 12px;
+}
+
+/* Aura */
+.aura-page { background: #f5efe7; color: #28231f; font-family: Arial, sans-serif; }
+.aura-page .mini-nav strong { font-family: Georgia, serif; font-size: 11px; }
+.aura-page .mini-nav nav b { background: #28231f; color: #f5efe7; }
+.aura-hero { height: 146px; display: grid; grid-template-columns: 1.1fr .9fr; padding: 6px 16px 0; gap: 12px; }
+.aura-hero .mini-copy { padding-top: 16px; }
+.aura-hero h3 { font: 700 22px/1.02 Georgia, serif; max-width: 185px; }
+.aura-hero p { color: #776b62; }
+.aura-hero button { background: #28231f; color: #f5efe7; }
+.mini-proof { display: flex; gap: 9px; margin-top: 8px; font-size: 4.8px; color: #8d7d71; }
+.aura-photo { position: relative; margin-top: 3px; border-radius: 70px 70px 0 0; background: linear-gradient(160deg,#d7c0ac,#b89679); overflow: hidden; }
+.portrait-head { position:absolute; width:39px;height:49px;border-radius:45% 45% 48% 48%;background:#d8b49c;left:50%;top:25px;transform:translateX(-50%); }
+.portrait-head::before { content:''; position:absolute; width:44px;height:30px;border-radius:50% 50% 35% 35%;background:#3a2d27;left:-2px;top:-8px; }
+.portrait-body { position:absolute; width:90px;height:85px;border-radius:50% 50% 0 0;background:#9f725f;left:50%;bottom:-18px;transform:translateX(-50%); }
+.aura-photo span { position:absolute; right:8px; bottom:8px; font:700 9px/1 Georgia,serif; color:#fff8ef; text-align:right; }
+.aura-photo em { font-weight:400; }
+.mini-strip { height: 52px; display:grid;grid-template-columns:repeat(3,1fr); border-top:1px solid #ded2c5; margin-top:4px; }
+.mini-strip div { padding:9px 14px; border-right:1px solid #ded2c5; display:flex;flex-direction:column;gap:3px; }
+.mini-strip strong { font:700 10px Georgia,serif; color:#9b755e; }
+.mini-strip span { font-size:5px;color:#72665d; }
+
+/* Vértice */
+.vertice-page { background:#0d1217;color:#eef5f2;font-family:Arial,sans-serif; }
+.vertice-page .mini-nav strong { color:#52f2c2; }
+.vertice-page .mini-nav nav b { background:#52f2c2;color:#09110e; }
+.vertice-hero { height:146px; display:grid;grid-template-columns:1.15fr .85fr; gap:14px;padding:8px 16px; }
+.vertice-hero .mini-copy { padding-top:13px; }
+.vertice-hero h3 { font:800 21px/1.02 'Plus Jakarta Sans',sans-serif; max-width:175px; }
+.vertice-hero p { color:#87958f; }
+.vertice-hero button { background:#52f2c2;color:#08110e; }
+.growth-panel { margin-top:8px;background:#121c22;border:1px solid #24363a;border-radius:6px;padding:11px; height:114px; }
+.growth-top { display:flex;flex-direction:column;gap:3px; }
+.growth-top span,.growth-bottom span { font-size:4.5px;color:#71817c;letter-spacing:.1em; }
+.growth-top strong { font-size:16px;color:#fff; }
+.chart-bars { height:42px;display:flex;align-items:end;gap:5px;margin:8px 0; }
+.chart-bars i { flex:1;background:#52f2c2;border-radius:1px 1px 0 0;opacity:.85; }
+.growth-bottom { display:flex;justify-content:space-between;align-items:end; }
+.growth-bottom b { font-size:8px; }
+.metric-row { height:45px;margin:0 16px;border-top:1px solid #1f2b30;display:grid;grid-template-columns:repeat(3,1fr); }
+.metric-row div { display:flex;flex-direction:column;gap:3px;justify-content:center;border-right:1px solid #1f2b30;padding-left:10px; }
+.metric-row small { font-size:4.3px;color:#68766f;letter-spacing:.12em; }
+.metric-row strong { font-size:9px;color:#52f2c2; }
+
+/* Nexo */
+.nexo-page { background:#f0ede6;color:#1d1d1b;font-family:Arial,sans-serif; }
+.nexo-nav strong { font-size:11px; }
+.nexo-nav nav span { color:#67635d; }
+.nexo-hero { padding:2px 14px 0; }
+.architecture-scene { height:114px; background:linear-gradient(#c6c0b7 0 52%,#8f8a80 52%); position:relative;overflow:hidden; }
+.building { position:absolute;bottom:0;background:#cfc9bf; }
+.b1 { left:18px;width:80px;height:64px;clip-path:polygon(0 100%,0 35%,54% 0,100% 25%,100% 100%); }
+.b2 { left:102px;width:104px;height:82px;clip-path:polygon(0 100%,0 42%,52% 0,100% 35%,100% 100%);background:#b4afa6; }
+.b3 { right:18px;width:62px;height:72px;background:#7e7a73; }
+.b3::before,.b3::after { content:'';position:absolute;top:10px;width:12px;height:62px;background:#3f403d; }
+.b3::before{left:10px}.b3::after{left:30px}
+.sun-disc { position:absolute; width:42px;height:42px;border-radius:50%;background:#ddd4c4;right:28px;top:12px; }
+.nexo-copy { display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 0 8px;align-items:end; }
+.nexo-copy small { font-size:4.5px;letter-spacing:.15em;color:#77716a;align-self:start; }
+.nexo-copy h3 { grid-row:2;font:700 17px/1 Georgia,serif;max-width:130px; }
+.project-line { grid-column:2;grid-row:1/3;align-self:end;border-top:1px solid #c8c0b6;padding-top:7px;display:flex;flex-direction:column;gap:3px; }
+.project-line span,.project-line b { font-size:4.8px; }
+.project-line b { color:#827c74;font-weight:400; }
+.nexo-projects { height:39px;border-top:1px solid #d4cdc3;display:grid;grid-template-columns:repeat(3,1fr); }
+.nexo-projects div { padding:7px 12px;border-right:1px solid #d4cdc3;display:flex;gap:5px;align-items:center; }
+.nexo-projects span { font-size:4.5px;color:#8b857d; }
+.nexo-projects strong { font-size:5.3px; }
+
+/* Lume */
+.lume-page { background:#f5e6cf;color:#5e4438;font-family:Arial,sans-serif; }
+.lume-nav strong { font:700 15px Georgia,serif;color:#d75d38; }
+.lume-nav nav b { background:#d75d38;color:#fff7e9; }
+.lume-hero { height:145px;display:grid;grid-template-columns:1fr 1fr;padding:5px 16px 0;gap:10px; }
+.lume-hero .mini-copy { padding-top:14px; }
+.lume-hero h3 { font:700 23px/1 Georgia,serif;color:#d75d38;max-width:150px; }
+.lume-hero p { color:#7b685f; }
+.lume-hero button { background:#5d7259;color:#fff8ed; }
+.product-scene { margin-top:5px;position:relative;background:#5d7259;border-radius:80px 80px 0 0;overflow:hidden; }
+.bottle { position:absolute;bottom:12px;border-radius:8px 8px 3px 3px;background:#f1d4b4;border:1px solid rgba(90,60,40,.18); }
+.bottle::before { content:'';position:absolute;left:50%;top:-10px;transform:translateX(-50%);width:18px;height:12px;border-radius:4px 4px 0 0;background:#d85d38; }
+.bottle.tall { width:42px;height:78px;left:27px; }
+.bottle.short { width:48px;height:55px;right:22px; }
+.orange-disc { position:absolute;width:58px;height:58px;border-radius:50%;background:#d85d38;right:-12px;top:18px;opacity:.8; }
+.product-scene span { position:absolute;top:14px;left:12px;font-size:5px;color:#eadbc7;letter-spacing:.15em; }
+.lume-products { height:49px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ddc9ae; }
+.lume-products div { padding:7px 8px;border-right:1px solid #ddc9ae;display:grid;grid-template-columns:15px 1fr;align-items:center;column-gap:6px; }
+.lume-products i { grid-row:1/3;width:15px;height:24px;border-radius:5px;background:#d75d38; }
+.lume-products div:nth-child(2) i { background:#5d7259; }
+.lume-products div:nth-child(3) i { background:#b78a68; }
+.lume-products span { font-size:4.4px; }
+.lume-products b { font-size:4.8px;color:#d75d38; }
+
+/* Frame */
+.frame-page { background:#160923;color:#f6eaff;font-family:Arial,sans-serif; }
+.frame-nav strong { color:#ff4fd8; }
+.frame-nav nav b { background:#ff4fd8;color:#190522; }
+.frame-hero { height:145px;display:grid;grid-template-columns:1.05fr .95fr;padding:6px 16px 0;gap:12px; }
+.frame-copy { padding-top:10px; }
+.frame-copy h3 { display:flex;flex-direction:column;font:900 22px/.93 'Plus Jakarta Sans',sans-serif; }
+.frame-copy h3 span:nth-child(2){color:#ff4fd8}.frame-copy h3 span:nth-child(3){color:#8b62ff}
+.frame-copy p { color:#bba6c9; }
+.frame-copy button { background:#ff4fd8;color:#190522; }
+.frame-poster { position:relative;margin-top:4px;background:linear-gradient(145deg,#291140,#1b0b2a);border:1px solid #6d3392;overflow:hidden; }
+.poster-ring { position:absolute;width:100px;height:100px;border:18px solid #7447ff;border-radius:50%;right:-25px;top:12px;opacity:.7; }
+.play-shape { position:absolute;left:35px;top:44px;width:0;height:0;border-top:22px solid transparent;border-bottom:22px solid transparent;border-left:34px solid #ff4fd8; }
+.frame-poster strong { position:absolute;right:10px;bottom:18px;font:900 42px/1 'Plus Jakarta Sans',sans-serif;color:#fff;opacity:.12; }
+.frame-poster span { position:absolute;left:12px;bottom:12px;font-size:6px;font-weight:800;line-height:1.1; }
+.speaker-row { height:49px;border-top:1px solid #38204a;display:flex;align-items:center;padding:0 16px;gap:10px; }
+.speaker-row div { display:flex;align-items:center;gap:4px; }
+.speaker { width:18px;height:18px;border-radius:50%;background:linear-gradient(#d6aa96,#6e4637);display:block;position:relative;overflow:hidden; }
+.speaker::after { content:'';position:absolute;width:22px;height:10px;border-radius:50% 50% 0 0;background:#4b295c;bottom:-3px;left:-2px; }
+.speaker.s2{background:linear-gradient(#b98768,#57392d)}.speaker.s3{background:linear-gradient(#e1b694,#7c4f3f)}
+.speaker-row span { font-size:4.5px;color:#bca8c9; }
+.speaker-row b { margin-left:auto;font-size:5px;color:#ff4fd8; }
+
+/* Atlas */
+.atlas-page { background:#0b1714;color:#edf8f4;font-family:Arial,sans-serif;display:grid;grid-template-columns:58px 1fr; }
+.atlas-side { background:#0f211c;border-right:1px solid #1f3b33;padding:13px 8px;display:flex;flex-direction:column;gap:11px; }
+.atlas-side strong { font-size:8px;color:#9dff63;margin-bottom:7px; }
+.atlas-side span { font-size:4.5px;color:#698178;padding:4px 5px;border-radius:3px; }
+.atlas-side .active { background:#18352c;color:#dff7ed; }
+.atlas-main { padding:10px 13px; }
+.atlas-main > header { display:flex;justify-content:space-between;align-items:center; }
+.atlas-main header small { font-size:4.2px;color:#688179;letter-spacing:.1em; }
+.atlas-main header h3 { font-size:12px;margin-top:2px; }
+.avatar-dot { width:19px;height:19px;border-radius:50%;background:#9dff63;color:#08110e;display:grid;place-items:center;font-size:5px;font-weight:800; }
+.atlas-balance { margin-top:10px;display:flex;justify-content:space-between;align-items:end; }
+.atlas-balance div { display:flex;flex-direction:column;gap:2px; }
+.atlas-balance small { font-size:4.2px;color:#6c827a;letter-spacing:.1em; }
+.atlas-balance strong { font-size:16px; }
+.atlas-balance span { font-size:4.8px;color:#9dff63; }
+.atlas-balance button { border:0;border-radius:10px;padding:5px 8px;background:#9dff63;color:#08110e;font-size:4.8px;font-weight:700; }
+.atlas-panels { margin-top:10px;display:grid;grid-template-columns:1.4fr .6fr;gap:7px;height:83px; }
+.atlas-chart,.atlas-donut { background:#0f211c;border:1px solid #1c3b32;border-radius:5px;padding:8px; }
+.panel-title { display:flex;justify-content:space-between;font-size:4.6px; }
+.panel-title b { color:#71867f;font-weight:400; }
+.line-chart { height:47px;display:flex;align-items:end;gap:4px;padding-top:6px;position:relative; }
+.line-chart::before { content:'';position:absolute;left:0;right:0;top:26px;border-top:1px solid #233c34; }
+.line-chart i { width:10px;background:linear-gradient(#9dff63,#2f5e4f);border-radius:2px 2px 0 0; }
+.line-chart i:nth-child(1){height:24%}.line-chart i:nth-child(2){height:38%}.line-chart i:nth-child(3){height:30%}.line-chart i:nth-child(4){height:48%}.line-chart i:nth-child(5){height:61%}.line-chart i:nth-child(6){height:56%}.line-chart i:nth-child(7){height:82%}
+.atlas-donut > span,.atlas-donut small { font-size:4.5px;color:#71867f; }
+.donut { width:43px;height:43px;border-radius:50%;margin:5px auto 3px;background:conic-gradient(#9dff63 0 74%,#244238 74%);display:grid;place-items:center;position:relative; }
+.donut::before { content:'';position:absolute;width:28px;height:28px;border-radius:50%;background:#0f211c; }
+.donut b { position:relative;z-index:1;font-size:7px; }
+
+@media (max-width: 768px) {
+  .realistic-site-shot { min-height: 260px; }
+  .site-browser-bar { height: 22px; flex-basis: 22px; }
+}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.joapgomez.com.br/#website",
+      "url": "https://www.joapgomez.com.br/",
+      "name": "JoapGomez",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.joapgomez.com.br/#joap-gomez",
+      "name": "Joap Gomez",
+      "url": "https://www.joapgomez.com.br/",
+      "jobTitle": "Designer e Diretor de Arte",
+      "email": "mailto:JoapGomez@outlook.com",
+      "sameAs": [
+        "https://www.instagram.com/JoapGomez",
+        "https://www.behance.net/JoapGomez"
+      ],
+      "knowsAbout": [
+        "Landing pages",
+        "Identidade visual",
+        "Direção criativa",
+        "Design para lançamentos",
+        "Criativos para redes sociais",
+        "Branding"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.joapgomez.com.br/#service",
+      "name": "JoapGomez — Design estratégico",
+      "url": "https://www.joapgomez.com.br/",
+      "email": "JoapGomez@outlook.com",
+      "telephone": "+55-16-99377-0505",
+      "founder": {
+        "@id": "https://www.joapgomez.com.br/#joap-gomez"
+      },
+      "sameAs": [
+        "https://www.instagram.com/JoapGomez",
+        "https://www.behance.net/JoapGomez"
+      ],
+      "areaServed": "BR",
+      "description": "Serviços de design estratégico, landing pages, identidade visual e direção criativa para marcas, infoprodutores e negócios digitais."
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.joapgomez.com.br/#servicos",
+      "name": "Serviços de design estratégico",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "position": 1,
+          "name": "Landing Pages",
+          "provider": {
+            "@id": "https://www.joapgomez.com.br/#service"
+          }
+        },
+        {
+          "@type": "Service",
+          "position": 2,
+          "name": "Identidade Visual",
+          "provider": {
+            "@id": "https://www.joapgomez.com.br/#service"
+          }
+        },
+        {
+          "@type": "Service",
+          "position": 3,
+          "name": "Criativos para Lançamentos",
+          "provider": {
+            "@id": "https://www.joapgomez.com.br/#service"
+          }
+        },
+        {
+          "@type": "Service",
+          "position": 4,
+          "name": "Direção Criativa",
+          "provider": {
+            "@id": "https://www.joapgomez.com.br/#service"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"</a></a>
+  <a href="#inicio" class="nav-logo">Joap<span>Gomez</span></a>
   <div style="display:flex;align-items:center;gap:0.75rem;flex-shrink:0;">
     <ul class="nav-links">
-      <li><a href="#portifolio">Serviços</a></li>
+      <li><a href="#portifolio">Projetos</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20quero%20solicitar%20um%20or%C3%A7amento!" class="nav-cta" target="_blank" style="display:flex;align-items:center;gap:0.45rem;">
+    <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20quero%20solicitar%20um%20or%C3%A7amento!" class="nav-cta" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:0.45rem;">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#000"/></svg>
-      Solicitar orçamento
+      Falar sobre projeto
     </a>
   </div>
 </nav>
@@ -1783,17 +2189,18 @@ section { padding: 3.5rem 5%; }
   <canvas id="particles" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.4;"></canvas>
   <div class="hero-content">
     <div class="hero-name">Joap<span class="name-accent">Gomez</span></div>
-    <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar!" class="hero-badge" style="text-decoration:none;cursor:pointer;" target="_blank">⚡ Vagas Limitadas — Garanta seu projeto agora!</a>
+    <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar!" class="hero-badge" style="text-decoration:none;cursor:pointer;" target="_blank" rel="noopener noreferrer">Agenda aberta para novos projetos</a>
     <h1 class="hero-title">
-      Design que<br>
-      <span class="line-accent">impacta</span> e<br>
-      <span class="line-muted">converte.</span>
+      Design estratégico<br>
+      para marcas que<br>
+      <span class="line-accent">precisam vender.</span>
     </h1>
     <p class="hero-desc" style="text-align:left;">
-      Crio identidades visuais, landing pages e comunicações que posicionam sua marca com clareza e elegância no mercado digital.
+      Crio landing pages, identidades visuais e criativos que aumentam a percepção de valor da sua oferta e posicionam sua marca no digital.
     </p>
     <div class="hero-actions">
-      <a href="#contato" class="btn-outline">Fale comigo</a>
+      <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20quero%20falar%20sobre%20meu%20projeto." class="btn-accent" target="_blank" rel="noopener noreferrer">Quero falar sobre meu projeto</a>
+      <a href="#portifolio" class="btn-outline">Ver projetos</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
@@ -1801,11 +2208,11 @@ section { padding: 3.5rem 5%; }
         <div class="hero-stat-label">Anos de experiência</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">118</div>
+        <div class="hero-stat-num">+118</div>
         <div class="hero-stat-label">Projetos entregues</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">53</div>
+        <div class="hero-stat-num">+54</div>
         <div class="hero-stat-label">Clientes satisfeitos</div>
       </div>
     </div>
@@ -1864,20 +2271,20 @@ section { padding: 3.5rem 5%; }
   <div class="ticker-track" id="ticker">
     <span class="ticker-item">Identidade Visual <span class="ticker-dot"></span></span>
     <span class="ticker-item">Landing Pages <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Branding Estratégico <span class="ticker-dot"></span></span>
-    <span class="ticker-item">UI/UX Design <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Motion Design <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Criativos para Lançamentos <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Páginas de Vendas <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Design para Ofertas <span class="ticker-dot"></span></span>
     <span class="ticker-item">Direção Criativa <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Design Editorial <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Redes Sociais <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Apresentações Estratégicas <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Criativos para Social</span></div><div class="ticker-item"><span>Alexandra Concept <span class="ticker-dot"></span></span>
     <span class="ticker-item">Identidade Visual <span class="ticker-dot"></span></span>
     <span class="ticker-item">Landing Pages <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Branding Estratégico <span class="ticker-dot"></span></span>
-    <span class="ticker-item">UI/UX Design <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Motion Design <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Criativos para Lançamentos <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Páginas de Vendas <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Design para Ofertas <span class="ticker-dot"></span></span>
     <span class="ticker-item">Direção Criativa <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Design Editorial <span class="ticker-dot"></span></span>
-    <span class="ticker-item">Redes Sociais <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Apresentações Estratégicas <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Criativos para Social <span class="ticker-dot"></span></span>
   </div>
 </div>
 
@@ -1887,11 +2294,11 @@ section { padding: 3.5rem 5%; }
   <div class="portfolio-header reveal">
     <div>
       <div class="section-tag">
-        <span class="section-tag-num">02</span>
+        <span class="section-tag-num">01</span>
         <span class="section-tag-line"></span>
-        <span class="section-tag-label">Trabalhos recentes</span>
+        <span class="section-tag-label">Seleção de trabalhos</span>
       </div>
-      <h2 class="section-title">Projetos que <span>falam</span><br>por si mesmos</h2>
+      <h2 class="section-title">Design pensado para <span>valor</span><br>e resultado</h2>
     </div>
     <div class="portfolio-filter">
       <button class="filter-btn active" data-filter="todos">Todos</button>
@@ -1901,164 +2308,261 @@ section { padding: 3.5rem 5%; }
     </div>
   </div>
 
+  <p class="portfolio-context reveal">Uma seleção de landing pages, websites e experiências digitais com diferentes abordagens de direção visual, hierarquia e conversão.</p>
+
+
+
   <div class="portfolio-grid">
-    <div class="portfolio-item reveal" data-cat="leads">
-      <div class="portfolio-thumb pt1" style="position:relative;overflow:hidden;"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-      <rect width="400" height="300" fill="#0f0f1a"/>
-      <rect x="40" y="40" width="320" height="220" rx="4" fill="#16162a"/>
-      <circle cx="200" cy="130" r="45" fill="none" stroke="#bff747" stroke-width="2"/>
-      <circle cx="200" cy="130" r="30" fill="#bff747" opacity="0.15"/>
-      <text x="200" y="136" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#bff747">MARCA</text>
-      <rect x="140" y="190" width="120" height="2" rx="1" fill="#bff747" opacity="0.4"/>
-      <text x="200" y="215" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#666" letter-spacing="3">IDENTIDADE VISUAL</text>
-      <rect x="60" y="60" width="60" height="8" rx="2" fill="#222238"/>
-      <rect x="60" y="76" width="40" height="6" rx="2" fill="#1a1a2e"/>
-    </svg></div>
-      <div class="portfolio-overlay">
-        <div class="portfolio-overlay-arrow">↗</div>
-        <div class="portfolio-overlay-cat">Branding</div>
-        <div class="portfolio-overlay-title">Marca Consciente</div>
-        <div class="portfolio-overlay-year">2024</div>
+
+    <article class="portfolio-item reveal" data-cat="leads" aria-label="Projeto Aura, landing page de captação">
+      <div class="portfolio-thumb realistic-site-shot aura-site">
+        <div class="site-browser">
+          <div class="site-browser-bar">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <div class="browser-address">aura.imersao</div>
+          </div>
+          <div class="site-page aura-page">
+            <header class="mini-nav">
+              <strong>AURA</strong>
+              <nav><span>Sobre</span><span>Programa</span><b>Participar</b></nav>
+            </header>
+            <section class="aura-hero">
+              <div class="mini-copy">
+                <small>IMERSÃO ONLINE · 3 ENCONTROS AO VIVO</small>
+                <h3>Sua presença começa por dentro.</h3>
+                <p>Uma experiência para transformar posicionamento, comunicação e presença de marca.</p>
+                <button>QUERO PARTICIPAR</button>
+                <div class="mini-proof"><span>4.9 ★</span><span>+380 participantes</span></div>
+              </div>
+              <div class="aura-photo">
+                <div class="portrait-head"></div>
+                <div class="portrait-body"></div>
+                <span>presença<br><em>intencional</em></span>
+              </div>
+            </section>
+            <section class="mini-strip">
+              <div><strong>01</strong><span>Clareza</span></div>
+              <div><strong>02</strong><span>Posicionamento</span></div>
+              <div><strong>03</strong><span>Expressão</span></div>
+            </section>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="portfolio-item reveal" data-cat="vendas">
-      <div class="portfolio-thumb pt2" style="position:relative;overflow:hidden;"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-      <rect width="400" height="300" fill="#0a0a14"/>
-      <rect x="110" y="20" width="180" height="320" rx="16" fill="#111120" stroke="#222" stroke-width="1"/>
-      <rect x="118" y="36" width="164" height="268" rx="10" fill="#0d0d1e"/>
-      <rect x="126" y="55" width="148" height="28" rx="6" fill="#1a1a30"/>
-      <rect x="133" y="62" width="60" height="8" rx="3" fill="#bff747" opacity="0.8"/>
-      <rect x="133" y="74" width="40" height="5" rx="2" fill="#333"/>
-      <rect x="126" y="92" width="148" height="60" rx="6" fill="#141428"/>
-      <rect x="134" y="100" width="50" height="6" rx="2" fill="#bff747" opacity="0.6"/>
-      <rect x="134" y="112" width="130" height="4" rx="2" fill="#222"/>
-      <rect x="134" y="122" width="100" height="4" rx="2" fill="#1e1e1e"/>
-      <rect x="126" y="162" width="70" height="70" rx="6" fill="#1a1a2e"/>
-      <rect x="204" y="162" width="70" height="70" rx="6" fill="#1a1a2e"/>
-      <rect x="134" y="175" width="40" height="5" rx="2" fill="#bff747" opacity="0.5"/>
-      <rect x="212" y="175" width="40" height="5" rx="2" fill="#bff747" opacity="0.3"/>
-      <circle cx="150" cy="198" r="8" fill="#bff747" opacity="0.2"/>
-      <circle cx="220" cy="198" r="8" fill="#fff" opacity="0.05"/>
-      <rect x="126" y="244" width="148" height="24" rx="6" fill="#bff747"/>
-      <text x="200" y="260" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#000">ACESSAR</text>
-    </svg></div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-arrow">↗</div>
-        <div class="portfolio-overlay-cat">UX/UI</div>
-        <div class="portfolio-overlay-title">App Financeiro</div>
-        <div class="portfolio-overlay-year">2024</div>
+        <div class="portfolio-overlay-cat">Landing Page • Leads</div>
+        <div class="portfolio-overlay-title">Aura — Imersão de Marca</div>
+        <div class="portfolio-overlay-year">2026</div>
       </div>
-    </div>
-    <div class="portfolio-item reveal" data-cat="sites">
-      <div class="portfolio-thumb pt3" style="position:relative;overflow:hidden;"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-      <rect width="400" height="300" fill="#0d0d0d"/>
-      <rect x="50" y="25" width="130" height="250" rx="3" fill="#141414" stroke="#222" stroke-width="1"/>
-      <rect x="55" y="30" width="120" height="80" rx="2" fill="#1e1e1e"/>
-      <rect x="55" y="30" width="120" height="80" rx="2" fill="#bff747" opacity="0.08"/>
-      <line x1="55" y1="30" x2="175" y2="110" stroke="#bff747" stroke-width="0.5" opacity="0.3"/>
-      <rect x="60" y="118" width="80" height="6" rx="2" fill="#bff747" opacity="0.7"/>
-      <rect x="60" y="130" width="110" height="3" rx="1" fill="#2a2a2a"/>
-      <rect x="60" y="138" width="100" height="3" rx="1" fill="#222"/>
-      <rect x="60" y="146" width="90" height="3" rx="1" fill="#1e1e1e"/>
-      <rect x="60" y="162" width="110" height="50" rx="2" fill="#181818"/>
-      <rect x="60" y="220" width="50" height="5" rx="2" fill="#333"/>
-      <rect x="60" y="230" width="70" height="4" rx="2" fill="#222"/>
-      <rect x="220" y="25" width="130" height="250" rx="3" fill="#141414" stroke="#222" stroke-width="1"/>
-      <rect x="226" y="31" width="118" height="140" rx="2" fill="#1a1a1a"/>
-      <rect x="234" y="45" width="60" height="4" rx="2" fill="#bff747" opacity="0.9"/>
-      <rect x="234" y="54" width="95" height="3" rx="1" fill="#2a2a2a"/>
-      <rect x="234" y="62" width="80" height="3" rx="1" fill="#222"/>
-      <rect x="234" y="95" width="102" height="65" rx="2" fill="#111"/>
-      <circle cx="285" cy="127" r="18" fill="#bff747" opacity="0.12"/>
-      <rect x="226" y="180" width="118" height="3" rx="1" fill="#222"/>
-      <rect x="226" y="188" width="90" height="3" rx="1" fill="#1e1e1e"/>
-      <rect x="226" y="196" width="100" height="3" rx="1" fill="#1a1a1a"/>
-    </svg></div>
+    </article>
+
+    <article class="portfolio-item reveal" data-cat="vendas" aria-label="Projeto Vértice, página de vendas">
+      <div class="portfolio-thumb realistic-site-shot vertice-site">
+        <div class="site-browser">
+          <div class="site-browser-bar">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <div class="browser-address">verticegrowth.com</div>
+          </div>
+          <div class="site-page vertice-page">
+            <header class="mini-nav dark">
+              <strong>VÉRTICE/</strong>
+              <nav><span>Método</span><span>Cases</span><b>Aplicar</b></nav>
+            </header>
+            <section class="vertice-hero">
+              <div class="mini-copy">
+                <small>ESTRATÉGIA · POSICIONAMENTO · EXECUÇÃO</small>
+                <h3>Estratégia para crescer sem ruído.</h3>
+                <p>Um método para organizar aquisição, oferta e execução em uma única direção.</p>
+                <button>GARANTIR MINHA VAGA</button>
+              </div>
+              <div class="growth-panel">
+                <div class="growth-top"><span>CRESCIMENTO</span><strong>+38%</strong></div>
+                <div class="chart-bars">
+                  <i style="height:24%"></i><i style="height:38%"></i><i style="height:31%"></i><i style="height:56%"></i><i style="height:67%"></i><i style="height:88%"></i>
+                </div>
+                <div class="growth-bottom"><span>Receita</span><b>R$ 284k</b></div>
+              </div>
+            </section>
+            <section class="metric-row">
+              <div><small>CLIENTES</small><strong>127</strong></div>
+              <div><small>NPS</small><strong>91</strong></div>
+              <div><small>ROI MÉDIO</small><strong>4,8x</strong></div>
+            </section>
+          </div>
+        </div>
+      </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-arrow">↗</div>
-        <div class="portfolio-overlay-cat">Editorial</div>
-        <div class="portfolio-overlay-title">Revista Urbana</div>
-        <div class="portfolio-overlay-year">2023</div>
+        <div class="portfolio-overlay-cat">Página de Vendas • Lançamento</div>
+        <div class="portfolio-overlay-title">Vértice — Método de Growth</div>
+        <div class="portfolio-overlay-year">2026</div>
       </div>
-    </div>
-    <div class="portfolio-item reveal" data-cat="leads">
-      <div class="portfolio-thumb pt4" style="position:relative;overflow:hidden;"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-      <rect width="400" height="300" fill="#080808"/>
-      <rect x="30" y="80" width="200" height="120" rx="6" fill="#151515" stroke="#2a2a2a" stroke-width="1" transform="rotate(-5 130 140)"/>
-      <rect x="30" y="80" width="200" height="120" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="1" transform="rotate(-2 130 140)"/>
-      <rect x="30" y="80" width="200" height="120" rx="6" fill="#111" stroke="#222" stroke-width="1"/>
-      <circle cx="65" cy="115" r="16" fill="#bff747" opacity="0.9"/>
-      <text x="65" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="800" fill="#000">JG</text>
-      <rect x="90" y="110" width="80" height="5" rx="2" fill="#fff" opacity="0.8"/>
-      <rect x="90" y="120" width="55" height="3" rx="1" fill="#666"/>
-      <rect x="45" y="155" width="60" height="3" rx="1" fill="#333"/>
-      <rect x="45" y="163" width="80" height="3" rx="1" fill="#2a2a2a"/>
-      <rect x="170" y="155" width="45" height="3" rx="1" fill="#bff747" opacity="0.4"/>
-      <rect x="230" y="100" width="160" height="100" rx="6" fill="#bff747" stroke="#a8e030" stroke-width="1" transform="rotate(3 310 150)"/>
-      <text x="265" y="142" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#000">JOAP</text>
-      <text x="265" y="156" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#000">GOMEZ</text>
-      <rect x="262" y="165" width="50" height="2" rx="1" fill="#00000040"/>
-      <rect x="262" y="172" width="80" height="3" rx="1" fill="#00000030"/>
-      <rect x="262" y="179" width="65" height="3" rx="1" fill="#00000025"/>
-    </svg></div>
+    </article>
+
+    <article class="portfolio-item reveal" data-cat="sites" aria-label="Projeto Nexo Studio, website de arquitetura">
+      <div class="portfolio-thumb realistic-site-shot nexo-site">
+        <div class="site-browser">
+          <div class="site-browser-bar lightbar">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <div class="browser-address">nexo.studio</div>
+          </div>
+          <div class="site-page nexo-page">
+            <header class="mini-nav nexo-nav">
+              <strong>NEXO.</strong>
+              <nav><span>Projetos</span><span>Studio</span><span>Contato</span></nav>
+            </header>
+            <section class="nexo-hero">
+              <div class="architecture-scene">
+                <div class="building b1"></div>
+                <div class="building b2"></div>
+                <div class="building b3"></div>
+                <div class="sun-disc"></div>
+              </div>
+              <div class="nexo-copy">
+                <small>ARQUITETURA / OBJETOS / ESPAÇO</small>
+                <h3>Espaços para permanecer.</h3>
+                <div class="project-line"><span>RESIDENCIAL ORLA</span><b>SÃO PAULO — 2026</b></div>
+              </div>
+            </section>
+            <section class="nexo-projects">
+              <div><span>01</span><strong>Casa Vértice</strong></div>
+              <div><span>02</span><strong>Pavilhão Norte</strong></div>
+              <div><span>03</span><strong>Residencial Orla</strong></div>
+            </section>
+          </div>
+        </div>
+      </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-arrow">↗</div>
-        <div class="portfolio-overlay-cat">Identidade Visual</div>
-        <div class="portfolio-overlay-title">Studio Arquitetura</div>
-        <div class="portfolio-overlay-year">2023</div>
+        <div class="portfolio-overlay-cat">Website • Arquitetura</div>
+        <div class="portfolio-overlay-title">Nexo — Studio Arquitetura</div>
+        <div class="portfolio-overlay-year">2026</div>
       </div>
-    </div>
-    <div class="portfolio-item reveal" data-cat="vendas">
-      <div class="portfolio-thumb pt5" style="position:relative;overflow:hidden;"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-      <rect width="400" height="300" fill="#060606"/>
-      <rect x="40" y="30" width="320" height="180" rx="4" fill="#0e0e0e" stroke="#1a1a1a" stroke-width="1"/>
-      <circle cx="200" cy="120" r="55" fill="none" stroke="#bff747" stroke-width="1" opacity="0.3"/>
-      <circle cx="200" cy="120" r="40" fill="none" stroke="#bff747" stroke-width="1" opacity="0.5"/>
-      <circle cx="200" cy="120" r="25" fill="#bff747" opacity="0.08"/>
-      <polygon points="193,107 193,133 217,120" fill="#bff747" opacity="0.9"/>
-      <rect x="40" y="220" width="320" height="2" rx="1" fill="#bff747" opacity="0.6"/>
-      <rect x="40" y="226" width="80" height="4" rx="2" fill="#bff747" opacity="0.4"/>
-      <rect x="40" y="236" width="180" height="4" rx="2" fill="#1e1e1e"/>
-      <rect x="40" y="248" width="120" height="4" rx="2" fill="#1a1a1a"/>
-      <rect x="300" y="228" width="60" height="24" rx="3" fill="#bff747"/>
-      <text x="330" y="244" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#000">ASSISTIR</text>
-    </svg></div>
+    </article>
+
+    <article class="portfolio-item reveal" data-cat="leads" aria-label="Projeto Lume, website de marca de bem-estar">
+      <div class="portfolio-thumb realistic-site-shot lume-site">
+        <div class="site-browser">
+          <div class="site-browser-bar lightbar">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <div class="browser-address">lume.ritual</div>
+          </div>
+          <div class="site-page lume-page">
+            <header class="mini-nav lume-nav">
+              <strong>lume</strong>
+              <nav><span>Rituais</span><span>Manifesto</span><b>Comprar</b></nav>
+            </header>
+            <section class="lume-hero">
+              <div class="mini-copy">
+                <small>CASA · CORPO · RITUAL</small>
+                <h3>Acenda o cotidiano.</h3>
+                <p>Objetos e rituais para criar pausa, presença e intenção dentro de casa.</p>
+                <button>CONHECER A COLEÇÃO</button>
+              </div>
+              <div class="product-scene">
+                <div class="bottle tall"></div>
+                <div class="bottle short"></div>
+                <div class="orange-disc"></div>
+                <span>RITUAL 01</span>
+              </div>
+            </section>
+            <section class="lume-products">
+              <div><i></i><span>Óleo de presença</span><b>R$ 89</b></div>
+              <div><i></i><span>Vela tempo lento</span><b>R$ 76</b></div>
+              <div><i></i><span>Bruma casa viva</span><b>R$ 64</b></div>
+            </section>
+          </div>
+        </div>
+      </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-arrow">↗</div>
-        <div class="portfolio-overlay-cat">Motion & Digital</div>
-        <div class="portfolio-overlay-title">Campanha Lançamento</div>
-        <div class="portfolio-overlay-year">2023</div>
+        <div class="portfolio-overlay-cat">Website • Branding</div>
+        <div class="portfolio-overlay-title">Lume — Marca de Bem-estar</div>
+        <div class="portfolio-overlay-year">2026</div>
       </div>
-    </div>
-    <div class="portfolio-item reveal" data-cat="leads">
-      <div class="portfolio-thumb pt6" style="position:relative;overflow:hidden;"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-      <rect width="400" height="300" fill="#070710"/>
-      <rect x="30" y="30" width="160" height="240" rx="4" fill="#0e0e1c" stroke="#1a1a2e" stroke-width="1"/>
-      <rect x="40" y="45" width="140" height="90" rx="3" fill="#12122a"/>
-      <text x="110" y="98" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" font-weight="800" fill="#bff747" opacity="0.9">BF</text>
-      <rect x="40" y="148" width="70" height="5" rx="2" fill="#bff747" opacity="0.6"/>
-      <rect x="40" y="160" width="135" height="3" rx="1" fill="#1e1e2e"/>
-      <rect x="40" y="168" width="115" height="3" rx="1" fill="#18182a"/>
-      <rect x="40" y="176" width="125" height="3" rx="1" fill="#14142a"/>
-      <rect x="40" y="196" width="50" height="18" rx="3" fill="#bff747"/>
-      <text x="65" y="209" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#000">VER MAIS</text>
-      <rect x="210" y="30" width="160" height="115" rx="4" fill="#bff747"/>
-      <text x="290" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="800" fill="#000">BF</text>
-      <rect x="225" y="105" width="60" height="3" rx="1" fill="#00000040"/>
-      <rect x="210" y="155" width="160" height="115" rx="4" fill="#0e0e1c" stroke="#1a1a2e" stroke-width="1"/>
-      <rect x="220" y="168" width="70" height="5" rx="2" fill="#bff747" opacity="0.4"/>
-      <rect x="220" y="180" width="140" height="3" rx="1" fill="#1e1e2e"/>
-      <rect x="220" y="188" width="110" height="3" rx="1" fill="#18182a"/>
-      <circle cx="350" cy="235" r="18" fill="#bff747" opacity="0.15"/>
-      <circle cx="350" cy="235" r="10" fill="#bff747" opacity="0.3"/>
-    </svg></div>
+    </article>
+
+    <article class="portfolio-item reveal" data-cat="vendas" aria-label="Projeto Frame 26, landing page de campanha">
+      <div class="portfolio-thumb realistic-site-shot frame-site">
+        <div class="site-browser">
+          <div class="site-browser-bar">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <div class="browser-address">frame26.live</div>
+          </div>
+          <div class="site-page frame-page">
+            <header class="mini-nav frame-nav">
+              <strong>FRAME/26</strong>
+              <nav><span>Line-up</span><span>Experiência</span><b>Ingressos</b></nav>
+            </header>
+            <section class="frame-hero">
+              <div class="frame-copy">
+                <small>14—16 AGO · ONLINE + AO VIVO</small>
+                <h3><span>CRIE.</span><span>ROMPA.</span><span>PUBLIQUE.</span></h3>
+                <p>Três dias para tirar ideias do arquivo e colocar projetos em movimento.</p>
+                <button>ENTRAR NO FRAME</button>
+              </div>
+              <div class="frame-poster">
+                <div class="poster-ring"></div>
+                <div class="play-shape"></div>
+                <strong>26</strong>
+                <span>IDEIAS EM<br>MOVIMENTO</span>
+              </div>
+            </section>
+            <section class="speaker-row">
+              <div><i class="speaker s1"></i><span>Direção</span></div>
+              <div><i class="speaker s2"></i><span>Criação</span></div>
+              <div><i class="speaker s3"></i><span>Distribuição</span></div>
+              <b>+12 convidados</b>
+            </section>
+          </div>
+        </div>
+      </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-arrow">↗</div>
-        <div class="portfolio-overlay-cat">Direção Criativa</div>
-        <div class="portfolio-overlay-title">Rebranding Global</div>
-        <div class="portfolio-overlay-year">2022</div>
+        <div class="portfolio-overlay-cat">Landing Page • Campanha</div>
+        <div class="portfolio-overlay-title">Frame/26 — Campanha Digital</div>
+        <div class="portfolio-overlay-year">2026</div>
       </div>
-    </div>
+    </article>
+
+    <article class="portfolio-item reveal" data-cat="sites" aria-label="Projeto Atlas, plataforma financeira">
+      <div class="portfolio-thumb realistic-site-shot atlas-site">
+        <div class="site-browser">
+          <div class="site-browser-bar">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <div class="browser-address">app.atlas.finance</div>
+          </div>
+          <div class="site-page atlas-page">
+            <aside class="atlas-side">
+              <strong>ATLAS</strong>
+              <span class="active">Visão geral</span>
+              <span>Carteira</span>
+              <span>Metas</span>
+              <span>Relatórios</span>
+            </aside>
+            <main class="atlas-main">
+              <header><div><small>BOM DIA, RAFAEL</small><h3>Visão geral</h3></div><div class="avatar-dot">RG</div></header>
+              <section class="atlas-balance">
+                <div><small>PATRIMÔNIO TOTAL</small><strong>R$ 284.920</strong><span>+4,8% este mês</span></div>
+                <button>+ Adicionar ativo</button>
+              </section>
+              <section class="atlas-panels">
+                <div class="atlas-chart">
+                  <div class="panel-title"><span>Evolução</span><b>12 meses</b></div>
+                  <div class="line-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="atlas-donut">
+                  <span>Alocação</span>
+                  <div class="donut"><b>74%</b></div>
+                  <small>Renda variável</small>
+                </div>
+              </section>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-cat">Produto Digital • UI/UX</div>
+        <div class="portfolio-overlay-title">Atlas — Plataforma Financeira</div>
+        <div class="portfolio-overlay-year">2026</div>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -2066,7 +2570,7 @@ section { padding: 3.5rem 5%; }
 <section id="processo">
   <div class="processo-intro">
     <div class="section-tag reveal">
-      <span class="section-tag-num">04</span>
+      <span class="section-tag-num">02</span>
       <span class="section-tag-line"></span>
       <span class="section-tag-label">Como trabalho</span>
     </div>
@@ -2108,7 +2612,7 @@ section { padding: 3.5rem 5%; }
       </div>
       <h2 class="section-title reveal">Soluções de design<br>que <span>transformam</span></h2>
     </div>
-    <p class="reveal">Cada serviço é entregue com estratégia, atenção aos detalhes e foco em resultado para o seu negócio.</p>
+    <p class="reveal">Soluções visuais para posicionar melhor sua oferta, aumentar a percepção de valor e conduzir o público à ação.</p>
   </div>
   <div class="svc-cards-grid">
     <div class="svc-card reveal">
@@ -2128,7 +2632,7 @@ section { padding: 3.5rem 5%; }
     <div class="svc-card reveal">
       <div class="svc-card-glow"></div>
       <div class="svc-card-icon-wrap"><span class="svc-card-icon">✦</span></div>
-      <div class="svc-card-title">UI/UX Design</div>
+      <div class="svc-card-title">Páginas de Vendas</div>
       <p class="svc-card-desc">Interfaces intuitivas e agradáveis para apps e plataformas digitais, com foco na experiência do usuário.</p>
       <span class="svc-card-tag">Apps & Plataformas</span>
     </div>
@@ -2142,7 +2646,7 @@ section { padding: 3.5rem 5%; }
     <div class="svc-card reveal">
       <div class="svc-card-glow"></div>
       <div class="svc-card-icon-wrap"><span class="svc-card-icon">▣</span></div>
-      <div class="svc-card-title">Design Editorial</div>
+      <div class="svc-card-title">Apresentações Estratégicas</div>
       <p class="svc-card-desc">Revistas, e-books, relatórios e apresentações com diagramação refinada e tipografia de alto nível.</p>
       <span class="svc-card-tag">Impresso & Digital</span>
     </div>
@@ -2168,7 +2672,7 @@ section { padding: 3.5rem 5%; }
     <span class="cliente-logo">Apex Engenharia</span>
     <span class="cliente-logo">CloudFox Sistema</span>
     <span class="cliente-logo">Nexus Digital</span>
-    <span class="cliente-logo">Gourmet Prime</span>
+    <span class="cliente-logo">Alexandra Concept</span>
     <span class="cliente-logo">Aura Estética & Spa</span>
     <span class="cliente-logo">Solaris Energia</span>
   </div>
@@ -2178,11 +2682,11 @@ section { padding: 3.5rem 5%; }
 <section id="depoimentos">
   <div class="depo-header reveal">
     <div class="section-tag">
-      <span class="section-tag-num">05</span>
+      <span class="section-tag-num">04</span>
       <span class="section-tag-line"></span>
-      <span class="section-tag-label">O que dizem sobre mim</span>
+      <span class="section-tag-label">Prova social</span>
     </div>
-    <h2 class="section-title">Clientes que <span>confiam</span><br>no meu trabalho</h2>
+    <h2 class="section-title">Resultados percebidos por quem <span>já trabalhou</span><br>comigo</h2>
   </div>
 
   <div class="depo-grid">
@@ -2224,7 +2728,7 @@ section { padding: 3.5rem 5%; }
     </div>
     <div class="depo-card reveal">
       <div class="depo-quote-mark">"</div>
-      <p class="depo-text">Contratei para criar a identidade visual do meu negócio e ficou excelente! Muito dedicado e atencioso em cada detalhe. Com certeza trabalharei com ela novamente.</p>
+      <p class="depo-text">Contratei para criar a identidade visual do meu negócio e ficou excelente! Muito dedicado e atencioso em cada detalhe. Com certeza trabalharei com ele novamente.</p>
       <div class="depo-author">
         <div class="depo-avatar">MR</div>
         <div>
@@ -2247,14 +2751,14 @@ section { padding: 3.5rem 5%; }
     </div>
     <div class="sobre-content">
       <div class="section-tag">
-        <span class="section-tag-num">06</span>
+        <span class="section-tag-num">05</span>
         <span class="section-tag-line"></span>
         <span class="section-tag-label">Quem sou eu</span>
       </div>
       <h2 class="section-title reveal">Joap<span>Gomez</span></h2>
-      <p class="reveal">Sou designer criativo e diretor de arte com mais de <strong>8 anos de experiência</strong> construindo marcas e comunicações visuais para empresas que desejam se destacar no mercado digital.</p>
-      <p class="reveal">Especializado em <strong>design de alta conversão</strong>, atendo infoprodutores, startups e empresas que precisam de presença visual forte e estratégica. Já atendi clientes do Brasil e do exterior.</p>
-      <p class="reveal">Minha missão é transformar ideias em experiências visuais memoráveis — unindo estética, estratégia e resultado.</p>
+      <p class="reveal">Sou designer e diretor de arte com mais de <strong>8 anos de experiência</strong> criando soluções visuais para marcas, lançamentos e negócios digitais que precisam comunicar valor com mais clareza.</p>
+      <p class="reveal">Meu foco está em <strong>design estratégico e alta percepção de valor</strong>: landing pages, identidades visuais e criativos para infoprodutores, startups e empresas. Já atendi clientes do Brasil e do exterior.</p>
+      <p class="reveal">Meu trabalho é transformar estratégia em uma experiência visual que faça a oferta parecer tão valiosa quanto ela realmente é — unindo estética, clareza e intenção comercial.</p>
       <div class="sobre-tags reveal">
         <span class="sobre-tag">Figma</span>
         <span class="sobre-tag">Adobe CC</span>
@@ -2268,23 +2772,53 @@ section { padding: 3.5rem 5%; }
   </div>
 </section>
 
+
+<!-- FAQ / CONTEÚDO DE RESPOSTA -->
+<section id="faq" class="faq-section">
+  <div class="section-tag reveal">
+    <span class="section-tag-line"></span>
+    <span class="section-tag-label">Perguntas frequentes</span>
+  </div>
+  <h2 class="section-title reveal">Design estratégico, <span>sem enrolação.</span></h2>
+  <p class="faq-intro reveal">Respostas diretas sobre meu trabalho, serviços e processo.</p>
+
+  <div class="faq-grid">
+    <details class="faq-item reveal">
+      <summary>Que tipo de projeto o Joap Gomez desenvolve?</summary>
+      <p>Desenvolvo landing pages, páginas de vendas, identidades visuais, criativos para lançamentos e direção criativa para marcas, infoprodutores, startups e negócios digitais.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary>Você cria landing pages com foco em conversão?</summary>
+      <p>Sim. O trabalho visual considera hierarquia da informação, percepção de valor, clareza da oferta e condução para a ação. O projeto pode partir de uma copy já pronta ou ser desenvolvido em colaboração com a estratégia do cliente.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary>Atende clientes fora de Ribeirão Preto e do Brasil?</summary>
+      <p>Sim. O atendimento e o processo podem acontecer de forma remota, permitindo trabalhar com clientes de diferentes cidades e países.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary>Como solicitar um orçamento de design?</summary>
+      <p>Envie uma mensagem pelo WhatsApp informando o tipo de projeto, objetivo, prazo desejado e o que já existe hoje. A partir dessas informações, avalio o escopo e indico o melhor próximo passo.</p>
+    </details>
+  </div>
+</section>
+
 <!-- CTA BANNER -->
 <div class="cta-banner">
-  <div class="cta-banner-title">Vamos criar algo extraordinário juntos?</div>
-  <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20quero%20conversar%20sobre%20um%20projeto!" class="btn-dark" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#bff747"/></svg> Chamar no WhatsApp</a>
+  <div class="cta-banner-title">Precisa elevar a percepção de valor da sua marca ou lançamento?</div>
+  <a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20quero%20conversar%20sobre%20um%20projeto!" class="btn-dark" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#bff747"/></svg> Chamar no WhatsApp</a>
 </div>
 
 <!-- CONTATO -->
 <section id="contato">
   <div class="section-tag reveal">
-    <span class="section-tag-num">07</span>
+    <span class="section-tag-num">06</span>
     <span class="section-tag-line"></span>
     <span class="section-tag-label">Entre em contato</span>
   </div>
   <div class="contato-grid">
     <div class="contato-left">
-      <h2 class="section-title reveal">Vamos <span>trabalhar</span><br>juntos?</h2>
-      <p class="reveal">Me chame pelo WhatsApp ou preencha o formulário. Respondo em até 24 horas e vamos conversar sobre o seu projeto.</p>
+      <h2 class="section-title reveal">Seu projeto precisa de <span>mais valor percebido?</span></h2>
+      <p class="reveal">Conte brevemente o que você está criando, lançando ou reposicionando. Respondo em até 24 horas para entender o projeto e indicar o melhor próximo passo.</p>
       <div class="contato-items reveal">
         <a href="https://wa.me/5516993770505" class="contato-item">
           <div class="contato-item-icon" style="background:rgba(37,211,102,0.08);border-color:rgba(37,211,102,0.2);">
@@ -2297,7 +2831,7 @@ section { padding: 3.5rem 5%; }
             <div class="contato-item-value">+55 (16) 99377-0505</div>
           </div>
         </a>
-        <a href="https://www.instagram.com/JoapGomez" class="contato-item" target="_blank">
+        <a href="https://www.instagram.com/JoapGomez" class="contato-item" target="_blank" rel="noopener noreferrer">
           <div class="contato-item-icon" style="background:rgba(225,48,108,0.08);border-color:rgba(225,48,108,0.2);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -2317,7 +2851,7 @@ section { padding: 3.5rem 5%; }
             <div class="contato-item-value">@JoapGomez</div>
           </div>
         </a>
-      <a href="https://www.behance.net/JoapGomez" class="contato-item" target="_blank">
+      <a href="https://www.behance.net/JoapGomez" class="contato-item" target="_blank" rel="noopener noreferrer">
           <div class="contato-item-icon" style="background:rgba(23,119,254,0.08);border-color:rgba(23,119,254,0.2);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.202.85 1.867 2.314 1.867.872 0 1.51-.443 1.74-1.28l2.5.442zM15.88 13h4.492c-.06-1.172-.71-1.967-2.155-1.967-1.327 0-2.16.768-2.337 1.967zM9.536 11.423c.668-.445.972-1.051.972-1.81C10.508 7.95 9.159 7 7.05 7H2v10h5.29c2.205 0 3.692-.981 3.692-3.076 0-1.004-.448-1.877-1.446-2.5zM4.538 9.15h2.33c.856 0 1.387.418 1.387 1.135 0 .77-.588 1.157-1.493 1.157H4.538V9.15zm2.655 5.66H4.538v-2.35h2.694c.957 0 1.525.43 1.525 1.178 0 .77-.593 1.172-1.564 1.172z" fill="#1777FE"/>
@@ -2363,12 +2897,12 @@ section { padding: 3.5rem 5%; }
     <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.04em;color:var(--text);">JoapGomez<span style="color:var(--accent);">.</span></span>
   </a>
   <ul class="footer-links">
-    <li><a href="#portifolio">Serviços</a></li>
+    <li><a href="#portifolio">Projetos</a></li>
     <li><a href="#depoimentos">Depoimentos</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <span class="footer-copy">© 2026 Todos os direitos reservados – JoapGomez | Design</span>
+  <span class="footer-copy">© 2026 Todos os direitos reservados – <span style="color:#BFF747;">JoapGomez | Design</span></span>
 </footer>
 
 <script>
@@ -2468,7 +3002,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 </script>
 
 <!-- WHATSAPP FLOATING -->
-<a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar!" class="wa-float" target="_blank" title="Chamar no WhatsApp">
+<a href="https://wa.me/5516993770505?text=Ol%C3%A1%20Joap%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar!" class="wa-float" target="_blank" rel="noopener noreferrer" title="Chamar no WhatsApp">
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#000"/>
   </svg>
