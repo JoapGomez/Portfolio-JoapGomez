@@ -2071,6 +2071,56 @@ button:focus-visible {
   .site-browser-bar { height: 22px; flex-basis: 22px; }
 }
 
+
+/* ─── CORREÇÃO PORTFÓLIO MOBILE: EXIBIÇÃO COMPLETA ─── */
+@media (max-width: 768px) {
+  .portfolio-item {
+    aspect-ratio: auto !important;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .portfolio-thumb.realistic-site-shot {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .realistic-site-shot .site-browser {
+    width: 400px;
+    height: 300px;
+    min-width: 400px;
+    min-height: 300px;
+    transform-origin: top left;
+    transform: scale(calc((100vw - 2.5rem) / 400));
+  }
+
+  .portfolio-thumb.realistic-site-shot {
+    height: calc((100vw - 2.5rem) * 0.75) !important;
+  }
+
+  .portfolio-overlay {
+    position: relative;
+    inset: auto;
+    opacity: 1;
+    background: var(--bg3);
+    padding: 1rem 1.1rem;
+    min-height: 92px;
+  }
+
+  .portfolio-item:hover .portfolio-thumb {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-thumb.realistic-site-shot {
+    height: calc((100vw - 2.5rem) * 0.75) !important;
+  }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -2902,7 +2952,7 @@ button:focus-visible {
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <span class="footer-copy">© 2026 Todos os direitos reservados – <span style="color:#BFF747;">JoapGomez | Design</span></span>
+  <span class="footer-copy">© 2026 Todos os direitos reservados – JoapGomez | <span style="color:#BFF747;">Design</span></span>
 </footer>
 
 <script>
