@@ -556,6 +556,30 @@
     margin-bottom:10px;
   }
   .footer-col a:hover{color:var(--text-0);}
+
+  .footer-social{
+    display:flex;
+    gap:12px;
+    margin-bottom:16px;
+  }
+  .footer-col a.social-icon{
+    width:40px; height:40px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--line);
+    border-radius:50%;
+    color:var(--text-1);
+    margin-bottom:0;
+    padding:0;
+    line-height:1;
+    transition:color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+  .footer-col a.social-icon svg{display:block;}
+  .footer-col a.social-icon:hover{
+    color:var(--orange);
+    border-color:var(--orange);
+    box-shadow:0 0 0 1px var(--orange), 0 0 18px rgba(255,156,0,0.35);
+    transform:translateY(-2px);
+  }
   .footer-bottom{
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px;
     padding-top:24px;
@@ -939,8 +963,17 @@
         </div>
         <div class="footer-col">
           <span class="mono">Contato</span>
-          <a href="https://api.whatsapp.com/send?phone=5516991309267&text=Ol%C3%A1,%20venho%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento,%20pode%20me%20ajudar?" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/esquadrimonte/" target="_blank" rel="noopener">Instagram @esquadrimonte</a>
+          <div class="footer-social">
+            <a href="https://api.whatsapp.com/send?phone=5516991309267&text=Ol%C3%A1,%20venho%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento,%20pode%20me%20ajudar?" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.08h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.16 8.16 0 0 1-1.26-4.32c0-4.52 3.68-8.2 8.24-8.2 2.2 0 4.27.86 5.82 2.42a8.13 8.13 0 0 1 2.41 5.79c0 4.53-3.68 8.16-8.23 8.16zm4.5-6.13c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.16 1.72 2.62 4.16 3.68.58.25 1.04.4 1.39.51.58.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/esquadrimonte/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100088164966864" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.52l.38-3H13.5V8.41c0-.87.24-1.46 1.49-1.46h1.59V4.32c-.28-.04-1.22-.12-2.33-.12-2.3 0-3.88 1.41-3.88 3.99v2.21H7.87v3H10.4V21h3.1z"/></svg>
+            </a>
+          </div>
           <span>Ribeirão Preto e região</span>
         </div>
       </div>
