@@ -92,7 +92,8 @@
 
   /* ---------- reduced motion ---------- */
   @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+    *:not(.strip-track){animation:none !important;}
+    *{transition:none !important; scroll-behavior:auto !important;}
   }
 
   /* ---------- nav ---------- */
@@ -201,6 +202,10 @@
     gap:56px;
     align-items:center;
   }
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .hero-visual{order:2;}
+  }
   .hero h1{
     font-size:clamp(40px, 6.4vw, 74px);
     margin-bottom:22px;
@@ -302,7 +307,13 @@
   .strip-track{
     display:inline-flex;
     gap:0;
+    will-change:transform;
+    -webkit-animation:scroll-strip 32s linear infinite;
     animation:scroll-strip 32s linear infinite;
+  }
+  @-webkit-keyframes scroll-strip{
+    from{-webkit-transform:translateX(0); transform:translateX(0);}
+    to{-webkit-transform:translateX(-50%); transform:translateX(-50%);}
   }
   @keyframes scroll-strip{
     from{transform:translateX(0);}
@@ -324,10 +335,6 @@
     color:var(--orange);
     font-size:8px;
   }
-  @media (prefers-reduced-motion: reduce){
-    .strip-track{animation:none;}
-  }
-
   /* ---------- section base ---------- */
   section{padding:56px 0;}
   .section-head{
@@ -577,6 +584,10 @@
     section{padding:40px 0;}
     .hero{padding:100px 0 36px;}
     .wrap{padding:0 20px;}
+    nav{padding:12px 16px;}
+    .brand{gap:8px;}
+    .brand-plate{padding:5px 6px 3px;}
+    .brand-plate img{height:22px;}
 
     .brand-sub{display:none;}
     .brand-name{font-size:17px;}
@@ -597,9 +608,9 @@
     .btn-hero-wa .btn-text-full{display:none;}
     .btn-hero-wa .btn-text-short{display:inline;}
 
-    .hero-meta{flex-direction:column; gap:14px;}
-    .hero-meta div{display:flex; align-items:baseline; gap:6px;}
-    .hero-meta strong{margin-bottom:0;}
+    .hero-meta{flex-direction:column; gap:16px;}
+    .hero-meta div{display:block;}
+    .hero-meta strong{margin-bottom:3px;}
 
     .hero-frame{padding:10px;}
     .hero-frame img{height:320px;}
@@ -658,7 +669,8 @@
       <a href="#processo">Como funciona</a>
       <a href="#contato">Contato</a>
       <a class="nav-cta" href="https://api.whatsapp.com/send?phone=5516991309267&text=Ol%C3%A1,%20venho%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento,%20pode%20me%20ajudar?" target="_blank" rel="noopener">
-        Orçamento →
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.08h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.16 8.16 0 0 1-1.26-4.32c0-4.52 3.68-8.2 8.24-8.2 2.2 0 4.27.86 5.82 2.42a8.13 8.13 0 0 1 2.41 5.79c0 4.53-3.68 8.16-8.23 8.16zm4.5-6.13c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.16 1.72 2.62 4.16 3.68.58.25 1.04.4 1.39.51.58.19 1.12.16 1.54.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+        WhatsApp
       </a>
     </div>
   </nav>
